@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>exercice 1.md</title><style></style></head><body id="preview">
+<h2 class="code-line" data-line-start=0 data-line-end=1 ><a id="Exercice_1_0"></a>Exercice 1</h2>
+<p class="has-line-data" data-line-start="1" data-line-end="18">1-lsblk<br>
+2- fdisk /dev/sdb ensuite<br>
+2.1  n = nouvelle partition; type p; numero 1; taille +6G<br>
+2.2 n pour le swap; typ p; numero 2; reste du disque<br>
+3- changement de type de la partition 2<br>
+3.1 t = change le type<br>
+2 numero de partition<br>
+code 82 (swap linux)<br>
+w = ecrit les modification<br>
+4- verification avec lsblk /dev/sdb<br>
+5- Formatage des partitions en ext4<br>
+5.1 mkfs.ext4 -l DATA /dev/sdb1<br>
+6- Partion SWAP<br>
+6.1mkswap -L SWAP /dev/sdb2<br>
+7- Activer/desactiver les SWAP<br>
+7.1 swapon /dev/sdb2<br>
+7.2 swapoff /dev/sda5</p>
+
+</body></html>
